@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.login{
+    position:relative;
+    margin: 100px auto;
+    padding: 50px 20px;
+    width: 950px;
+    height: 250px;
+    border:1px solid #333;
+}
+.login h1{
+    font-weight: bold;
+    color: green;
+    text-align: center;
+}
+.login label{
+    display:inline-block;
+    width: 350px;
+    text-align: right;
+}
+.login .label1{
+    text-align: left;
+}
+.btn{
+    height: 30px;
+    width: 100px;
+    padding: 5px;
+    border: 0;
+    background-color: #00dddd;
+    font-weight: bold;
+    cursor: pointer;
+    float: right;
+}
+input{
+    height: 20px;
+    width: 170px;
+}
+.borderRed{
+    border: 2px solid red;
+}
+/*#cname,#cpass,#crepass,#cemail{*/
+    /*display: none;*/
+    /*color: #F00;*/
+/*}*/

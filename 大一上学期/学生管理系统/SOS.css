@@ -1,0 +1,215 @@
+body{
+    background-image: url('5.jpg');
+    background-repeat: no-repeat;
+    background-color: darkblue;
+}
+#form1{
+    width: 50%;
+}
+input{
+    width: 400px;
+    height: 50px;
+    float: left;
+    font-size: 200%;
+    background: none;
+}
+#in1{
+    position: fixed;
+    left: 200px;
+    top:18px;
+}
+#in2{
+    position: fixed;
+    left: 200px;
+    top:86px;
+}
+#in3 {
+    position: fixed;
+    left: 200px;
+    top:150px;
+}
+#in4{
+    position: fixed;
+    left: 200px;
+    top:217px;
+}
+#in5{
+    position: fixed;
+    left: 200px;
+    top:284px;
+}
+label{
+    height: 75px;
+    font-size: 200%;
+    color: #ffffff;
+    position: fixed;
+}
+.table{
+    float: right;
+    font-size: 120%;
+    color: #ffffff;
+}
+#tr{
+    outline: #000000 solid thick;
+    width: 600px;
+    height: 50px;
+}
+.tr{
+    outline: #000000 solid thick;
+    width: 600px;
+    height: 50px;
+}
+th{
+    outline: #000000 solid thick;
+    width: 100px;
+    height: 50px;
+}
+td{
+    outline: #000000 solid thick;
+    width: 100px;
+    height: 50px;
+}
+#button1{
+    width: 300px;
+    height: 70px;
+    color: #ffffff;
+    background-color: rgba(30,30,20,100);
+    border: #0fffff solid 2px;
+    position: fixed;
+    top: 350px;
+    font-size: 200%;
+}
+#button1:hover{
+
+    animation-duration: 10s;
+    animation-delay: 1ms;
+    animation-name: bu1;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes bu1 {
+    from{
+        width: 300px;
+        height: 70px;
+        color: #ffffff;
+        background-color: rgba(30,30,20,100);
+        border: #0fffff solid 2px;
+        position: fixed;
+        top: 350px;
+        font-size: 200%;
+    }
+    25%{
+        width: 300px;
+        height: 70px;
+        color: #ffffff;
+        background-color: rgba(100,97,213,0.9);
+        border: #0fffff solid 2px;
+        position: fixed;
+        top: 350px;
+        font-size: 200%;
+    }
+    50%{
+        width: 300px;
+        height: 70px;
+        color: #ffffff;
+        background-color: rgba(74,180,213,0.9);
+        border: #0fffff solid 2px;
+        position: fixed;
+        top: 350px;
+        font-size: 200%;
+    }
+    75%{
+        width: 300px;
+        height: 70px;
+        color: #ffffff;
+        background-color: rgba(98,213,66,0.9);
+        border: #0fffff solid 2px;
+        position: fixed;
+        top: 350px;
+        font-size: 200%;
+    }
+    to{
+        width: 300px;
+        height: 70px;
+        color: #fff;
+        background-color: rgba(0,0,0,0);
+        border: #0fffff solid 2px;
+        position: fixed;
+        top: 350px;
+        font-size: 200%;
+    }
+}
+#button2{
+    width: 300px;
+    height: 70px;
+    color: #ffffff;
+    background-color: rgba(30,30,20,100);
+    border: #0fffff solid 2px;
+    position: fixed;
+    top: 450px;
+    font-size: 200%;
+}
+#button3{
+    width: 300px;
+    height: 70px;
+    color: #ffffff;
+    background-color: rgba(30,30,20,100);
+    border: #0fffff solid 2px;
+    position: fixed;
+    top: 550px;
+    font-size: 200%;
+}
+#button4{
+    width: 300px;
+    height: 70px;
+    color: #ffffff;
+    background-color: rgba(30,30,20,100);
+    border: #0fffff solid 2px;
+    position: fixed;
+    top: 650px;
+    font-size: 200%;
+}
+#button5{
+    width: 300px;
+    height: 70px;
+    color: #ffffff;
+    background-color: rgba(30,30,20,100);
+    border: #0fffff solid 2px;
+    position: fixed;
+    top: 350px;
+    left: 350px;
+    font-size: 200%;
+}
+#button6{
+    width: 300px;
+    height: 70px;
+    color: #ffffff;
+    background-color: rgba(30,30,20,100);
+    border: #0fffff solid 2px;
+    position: fixed;
+    top: 450px;
+    left: 350px;
+    font-size: 200%;
+}
+#button7{
+    width: 300px;
+    height: 70px;
+    color: #ffffff;
+    background-color: rgba(30,30,20,100);
+    border: #0fffff solid 2px;
+    position: fixed;
+    top: 550px;
+    left: 350px;
+    font-size: 200%;
+}
+#button8{
+    width: 300px;
+    height: 70px;
+    color: #ffffff;
+    background-color: rgba(30,30,20,100);
+    border: #0fffff solid 2px;
+    position: fixed;
+    top: 650px;
+    left: 350px;
+    font-size: 200%;
+}

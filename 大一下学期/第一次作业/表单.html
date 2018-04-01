@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<div class="login">
+    <form action="login.do?act=login" method="post" name="form" id='form' onsubmit="return check()">
+        <h1>[新用户注册]</h1>
+        <p>
+            <label for="name">用户名:</label>
+            <input type="text" id="name" onblur="checkName(this.value)">
+            <label id="cname" class="label1">*请输入用户名</label>
+        </p>
+        <p>
+            <label for="password">密码:</label>
+            <input type="password" id="password" onblur="checkPassword(this.value)">
+            <label id="cpass" class="label1">*请输入6-16个合法字符并以字母开头</label>
+        </p>
+        <p>
+            <label for="repassword">重复密码:</label>
+            <input type="password" id="repassword" onblur="checkRepassword(this.value)">
+            <label id="crepass" class="label1">*请重复密码</label>
+        </p>
+        <p>
+            <label for="email">E-mail:</label>
+            <input type="text" id="email" onblur="checkEmail(this.value)">
+            <label id="cemail" class="label1">*请输入邮箱</label>
+        </p>
+        <p>
+            <input type="submit" value="注册" class="btn">
+        </p>
+    </form>
+</div>
+<!--<iframe id="id_iframe" name="nm_iframe" style="display:none;"></iframe> -->
+<script>
+    function check() {
+        var name = document.getElementById('name');
+        var password = document.getElementById('password');
+        var repassword = document.getElementById('repassword');
+        var email = document.getElementById('email');
+        checkName(name.value);
+        checkPassword(password.value);
+        checkRepassword(repassword.value);
+        checkEmail(email.value);
+        return (checkName(name.value)&& checkPassword(password.value)&& checkRepassword(repassword.value)&& checkEmail(email.value));
+    }
+    function checkName(name){
+        if(name === ""){
+            document.getElementById('name').style.border = "2px solid red";
+            document.getElementById('cname').innerHTML = "*用户名不能为空";
+            document.getElementById('cname').style.color = "#EE1121";
+            document.getElementById('cname').style.display = "inline";
+            return false;
+        }else{
+            document.getElementById('name').style.border = "2px solid green";
+            document.getElementById('cname').innerHTML = "*正确";
+            document.getElementById('cname').style.color = "#22EE22";
+            document.getElementById('cname').style.display = "inline";
+            return true;
+        }
+    }
+    function checkPassword(password){
+        var aa = /^[a-zA-Z]\w{5,17}$/;
+        if(password === ""){
+            document.getElementById('password').style.border = "2px solid red";
+            document.getElementById('cpass').innerHTML = "*密码不能为空";
+            document.getElementById('cpass').style.color = "#EE1121";
+            document.getElementById('cpass').style.display = "inline";
+            return false;
+        }
+        else{
+            if(password.match(aa)){
+                document.getElementById('password').style.border = "2px solid green";
+                document.getElementById('cpass').innerHTML = "*正确";
+                document.getElementById('cpass').style.color = "#22EE22";
+                document.getElementById('cpass').style.display = "inline";
+                return true;
+            }
+            else{
+                document.getElementById('password').style.border = "2px solid red";
+                document.getElementById('cpass').innerHTML = "*请输入6-16个字符（字母，数字或下划线）并以字母开头";
+                document.getElementById('cpass').style.color = "#EE1121";
+                document.getElementById('cpass').style.display = "inline";
+                return false;
+            }
+        }
+    }
+    function checkRepassword(repassword){
+        var password = document.getElementById('password');
+        if(repassword === ""){
+            document.getElementById('repassword').style.border = "2px solid red";
+            document.getElementById('crepass').innerHTML = "*不能为空";
+            document.getElementById('crepass').style.color = "#EE1121";
+            document.getElementById('crepass').style.display = "inline";
+            return false;
+        }
+        else if(repassword !== password.value && repassword !== ""){
+            document.getElementById('repassword').style.border = "2px solid red";
+            document.getElementById('crepass').innerHTML = "前后两次密码不一致";
+            document.getElementById('crepass').style.color = "#EE1121";
+            document.getElementById('crepass').style.display = "inline";
+            return false;
+        }
+        else if(repassword === password.value){
+            document.getElementById('repassword').style.border = "2px solid green";
+            document.getElementById('crepass').innerHTML = "*正确";
+            document.getElementById('crepass').style.color = "#22EE22";
+            document.getElementById('crepass').style.display = "inline";
+            return true;
+        }
+    }
+    function checkEmail(email){
+        var bb = /^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
+        if(email === ""){
+            document.getElementById('email').style.border = "2px solid red";
+            document.getElementById('cemail').innerHTML = "*邮箱不能为空";
+            document.getElementById('cemail').style.color = "#EE1121";
+            document.getElementById('cemail').style.display = "inline";
+            return false;
+        }
+        else{
+            if(email.match(bb)){
+                document.getElementById('email').style.border = "2px solid green";
+                document.getElementById('cemail').innerHTML = "*正确";
+                document.getElementById('cemail').style.color = "#22EE22";
+                document.getElementById('cemail').style.display = "inline";
+                return true;
+            }
+            else{
+                document.getElementById('email').style.border = "2px solid red";
+                document.getElementById('cemail').innerHTML = "*请输入正确的邮箱格式";
+                document.getElementById('cemail').style.color = "#EE1121";
+                document.getElementById('cemail').style.display = "inline";
+                return false;
+            }
+        }
+    }
+</script>
+</body>
+</html>
